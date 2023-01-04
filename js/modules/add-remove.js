@@ -1,3 +1,5 @@
+import LocalStorage from "./local-storage.js";
+
 // Contenedor de items
 const itemsContainer = document.getElementById('todo-items');
 const inputDescription = document.getElementById('todo-item');
@@ -5,6 +7,9 @@ const inputDescription = document.getElementById('todo-item');
 
 class Items{
   static displayItems() {
+    const items = LocalStorage.getItem();
+
+    items.forEach((item) => Items.addItem(item));
 
   }
   static addItem(item){
