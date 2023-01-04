@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>To Do List</title>
+    <title>My To do list</title>
+
     <!-- Link para el favicon -->
     <link
       rel="icon"
@@ -29,55 +30,56 @@
     <!-- Link para mi archivo de CSS -->
     <link rel="stylesheet" href="./assets/styles/styles.css" />
   </head>
+
   <body>
-    <div>
-      <header id="header" class="header">
-        <h1 class="header__title">TODO</h1>
-        <img
-          src="./assets/images/icon-moon.svg"
-          alt="icon of the mode"
-          id="main-icon"
-        />
-      </header>
-      <main id="main" class="main">
-        <form class="form shadow" id="form">
-          <div class="form__container">
-            <div class="form__container__items">
-              <div
-                class="form__container__circle items-circle check-holder"
-              ></div>
-              <input
-                type="text"
-                id="todo-item"
-                class="form__container__todo"
-                placeholder="Create a new todo..."
-              />
-            </div>
+    <header id="header" class="header">
+      <h1 class="header__title">TODO</h1>
+      <img
+        src="./assets/images/icon-moon.svg"
+        alt="icon of the mode"
+        id="main-icon"
+      />
+    </header>
 
-            <button type="submit"><i class="fa-solid fa-plus"></i></button>
+    <main id="main" class="main">
+      <form class="form shadow" id="form">
+        <div class="form__container">
+          <div class="form__container__items">
+            <div
+              class="form__container__circle items-circle check-holder"
+            ></div>
+            <input
+              type="text"
+              id="todo-item"
+              class="form__container__todo"
+              placeholder="Create a new todo..."
+            />
           </div>
-        </form>
 
-        <section id="todo-cont" class="items shadow">
-          <article id="todo-items" class="items__container"></article>
+          <button type="submit"><i class="fa-solid fa-plus"></i></button>
+        </div>
+      </form>
 
-          <div id="main-footer" class="items__footer">
-            <p id="items-left" class="items__footer__lefts">0 items left</p>
-            <p id="items-clear" class="items__footer__clear">Clear Completed</p>
-          </div>
-        </section>
+      <section id="todo-cont" class="items shadow">
+        <article id="todo-items" class="items__container"></article>
 
-        <article id="filter" class="filterbox shadow">
-          <p id="filter-all" class="filterbox__filters active">All</p>
-          <p id="filter-active" class="filterbox__filters">Active</p>
-          <p id="filter-completed" class="filterbox__filters">Completed</p>
-        </article>
-      </main>
+        <div id="main-footer" class="items__footer">
+          <p id="items-left" class="items__footer__lefts">0 items left</p>
+          <p id="items-clear" class="items__footer__clear">Clear Completed</p>
+        </div>
+      </section>
 
-      <footer id="footer" class="footer">
-        <p>Drag and drop to reorder list</p>
-      </footer>
-    </div>
+      <article id="filter" class="filterbox shadow">
+        <p id="filter-all" class="filterbox__filters active">All</p>
+        <p id="filter-active" class="filterbox__filters">Active</p>
+        <p id="filter-completed" class="filterbox__filters">Completed</p>
+      </article>
+    </main>
+
+    <footer id="footer" class="footer">
+      <p>Drag and drop to reorder list</p>
+    </footer>
+
     <script src="./js/main.js" type="module"></script>
   </body>
 </html>
