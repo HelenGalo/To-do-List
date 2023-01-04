@@ -1,5 +1,6 @@
 // Creacion de Variables
 $link-active: hsl(220, 98%, 61%);
+$check-bg: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
 
 // Light theme colors
 $light: hsl(0, 0%, 98%);
@@ -56,15 +57,16 @@ body {
     align-items: center;
     padding: 0.75rem 1rem;
     width: 100%;
-  }
-  &__items {
-    display: flex;
-    width: 90%;
-  }
-  &__todo {
-    outline: none;
-    border: none;
-    width: 100%;
+    &__items {
+      display: flex;
+      width: 90%;
+    }
+    &__todo {
+      outline: none;
+      border: none;
+      width: 100%;
+    }
+
     button {
       border: none;
       background-color: transparent;
@@ -94,7 +96,7 @@ body {
   &__container {
     display: flex;
     justify-content: center;
-    flex-direction: center;
+    flex-direction: column;
     align-items: center;
     width: 100%;
   }
@@ -105,6 +107,7 @@ body {
     width: 100%;
     padding: 1rem 0;
     color: $filters;
+
     &__lefts {
       margin-left: 1rem;
     }
@@ -129,28 +132,33 @@ body {
   align-items: center;
   padding: 1.45rem 0;
   width: 100%;
-}
-&__container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-left: 1rem;
-  &__checked {
+  border-bottom: 1px solid #ddd;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 1rem;
+    &__checked {
+      cursor: pointer;
+    }
+    &__item {
+      font-size: 1rem;
+      color: $todo-text;
+    }
+  }
+  button {
+    border: none;
+    background-color: transparent;
+    margin-right: 1rem;
     cursor: pointer;
   }
-  &__item {
-    font-size: 1rem;
-    color: $todo-text;
-  }
 }
 
-button {
-  border: none;
-  background-color: transparent;
-  margin-right: 1rem;
-  cursor: pointer;
+.completed {
+  background: $check-bg;
+  background-image: url("../images/icon-check.svg");
 }
-
 /*Filter Box*/
 .filterbox {
   display: flex;
